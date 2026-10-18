@@ -1,0 +1,18 @@
+@font-face{font-family:PJS;src:url(node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:PJS;src:url(node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:PJS;src:url(node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:PJS;src:url(node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-800-normal.woff2);font-weight:800}
+:root{--bg:#0D1A2C;--card:#132640;--line:#1F3A5C;--em:#00C696;--em2:#5CF0C4;--yel:#FFD23F;--cor:#FF5C7A;--txt:#FFFFFF;--mut:#9FB3C8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:var(--w);height:var(--h);overflow:hidden}
+body{font-feature-settings:"calt" 0;font-family:PJS,Inter,sans-serif;color:var(--txt);background:var(--bg);
+ background-image:radial-gradient(rgba(255,255,255,.07) 1.5px,transparent 1.5px);background-size:28px 28px;position:relative}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(0,198,150,.22),transparent 60%);right:-300px;top:-300px;pointer-events:none}
+.logo{position:absolute;height:52px}
+.pill{display:inline-block;background:var(--yel);color:#0D1A2C;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:10px 22px;font-size:22px}
+.hook{font-weight:800;line-height:1.02;letter-spacing:-.02em}
+.hook .y{color:var(--yel)} .hook .e{color:var(--em)} .hook .c{color:var(--cor)}
+.sub{color:var(--mut);font-weight:600}
+.card{background:var(--card);border:2px solid var(--line);border-radius:28px}
+.foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;color:var(--mut);font-weight:600}
+.foot b{color:var(--em);font-weight:800}
