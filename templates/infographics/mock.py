@@ -49,7 +49,7 @@ body{{width:480px;background:#101010;color:#F3F5F7}}
 .p{{display:flex;gap:12px;padding:18px 16px 16px}}
 .av{{flex:none;width:40px;height:40px;border-radius:50%;background:#0D1A2C url(logo.png) center/80% no-repeat;border:1px solid #333}}
 .top{{display:flex;gap:8px;align-items:baseline;font-size:15px}} .top b{{font-weight:600}} .top span{{color:#777}}
-.tx{{font-size:15px;line-height:1.4;margin-top:4px}} .hk{{font-weight:600}}
+.tx{{font-size:15px;line-height:1.4;margin-top:4px}} .hk{{font-weight:400}}
 .im{{margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid #2A2A2A;width:300px}} .im img{{display:block;width:100%}}
 .ac{{display:flex;gap:22px;margin-top:12px}}
 .note{{color:#777;font-size:12px;text-align:center;padding:0 0 14px}}
