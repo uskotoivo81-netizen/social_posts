@@ -12,6 +12,17 @@ LAYOUT = {
 .extra{margin-top:22px}
 .foot{padding:0 64px 44px;font-size:20px}
 """),
+ 'S': (1080, 1350, """
+.wrap{position:absolute;inset:0;padding:52px 60px}
+.logo{left:60px;top:52px;height:50px}
+.head{margin-top:80px}
+.hook{font-size:var(--hs,78px);margin-top:18px}
+.sub{font-size:26px;margin-top:14px}
+.main{margin-top:24px}
+.extra{margin-top:16px}
+.foot{padding:0 60px 34px;font-size:18px}
+.card{padding:24px 30px}
+"""),
  'X': (1600, 900, """
 .wrap{position:absolute;inset:0;padding:48px 64px;display:grid;grid-template-columns:600px 1fr;column-gap:56px;grid-template-rows:auto 1fr}
 .logo{left:64px;top:44px;height:46px}
@@ -29,7 +40,7 @@ def page(name, fmt, head, main, extra, foot_l, css=''):
     html = f"""<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
 <style>:root{{--w:{w}px;--h:{h}px}}{lay}{css}</style></head><body class="{fmt}"><div class="glow"></div>
 <img class="logo" src="logo.png">
-<div class="wrap"><div class="head">{head}{extra if fmt=='X' else ''}</div><div class="main">{main}{extra if fmt=='P' else ''}</div></div>
+<div class="wrap"><div class="head">{head}{extra if fmt=='X' else ''}</div><div class="main">{main}{extra if fmt in ('P','S') else ''}</div></div>
 <div class="foot"><span>{foot_l}</span><b>en.speedyindex.com</b></div></body></html>"""
     p = os.path.join(D, f'{name}_{fmt}.html'); open(p, 'w').write(html)
     return p, w, h
@@ -136,7 +147,7 @@ if __name__ == '__main__':
     base_css = open(os.path.join(D, 'base.css')).read()
     jobs = []
     for name, it in ITEMS.items():
-        for fmt in ('P', 'X'):
+        for fmt in ('P', 'X', 'S'):
             css = COMMON + it['css'] + f":root{{--hp:{it['hp']};--hx:{it['hx']}}}"
             p, w, h = page(name, fmt, it['head'], it['main'], it['extra'], it['foot'], css)
             jobs += [p, str(w), str(h), os.path.join(D, 'out', f'{name}_{fmt}.png')]
