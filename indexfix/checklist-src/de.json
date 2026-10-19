@@ -1,0 +1,184 @@
+{
+ "title": "Indexierungsprobleme: Diagnose-Checkliste",
+ "sub": "Geh von oben nach unten vor. Der erste fehlgeschlagene Check ist meist die Ursache – behebe ihn, bevor du weitermachst.",
+ "brandline": "Kostenlose Browser-Tools für Crawling- und Indexierungsprobleme",
+ "date": "Oktober 2026",
+ "legend": "☐ prüfen · ✕ bringt nichts",
+ "sections": [
+  {
+   "h": "1. Finde heraus, was Google meldet",
+   "items": [
+    [
+     "Prüfe die URL in der Search Console (URL Inspection). Notiere das Ergebnis und den Status unter Page indexing.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Führe „Test live URL“ aus, um die Seite im aktuellen Zustand zu sehen. Das indexierte Ergebnis kann älter sein als deine letzte Änderung.",
+     ""
+    ],
+    [
+     "Bei vielen URLs: Exportiere den Bericht Page indexing und gruppiere die URLs nach Grund.",
+     "page-indexing-report-analyzer"
+    ],
+    [
+     "Bei Seiten auf fremden Websites, z. B. Backlinks, prüfe den Indexstatus der ganzen Liste auf einmal.",
+     "SI:checker"
+    ]
+   ]
+  },
+  {
+   "h": "2. Kann Google die Seite abrufen?",
+   "items": [
+    [
+     "Die Seite liefert 200. Kein 404 oder 410, kein 5xx-Fehler, kein Login, keine Paywall.",
+     ""
+    ],
+    [
+     "Kein Soft 404: eine leere oder „Nicht gefunden“-Seite, die mit Status 200 ausgeliefert wird.",
+     ""
+    ],
+    [
+     "Weiterleitungen enden auf einer 200-Seite, idealerweise in einem Schritt, ohne Ketten oder Schleifen.",
+     "redirect-map-generator"
+    ],
+    [
+     "Googlebot erhält schnelle, fehlerfreie Antworten. Prüfe seine echten Zugriffe in den Serverlogs.",
+     "googlebot-log-analyzer"
+    ]
+   ]
+  },
+  {
+   "h": "3. Darf Google die Seite crawlen und indexieren?",
+   "items": [
+    [
+     "robots.txt sperrt die URL nicht für Googlebot.",
+     "robots-txt-tester"
+    ],
+    [
+     "Kein noindex im robots-Meta-Tag oder im HTTP-Header X-Robots-Tag.",
+     "SI:noindex"
+    ],
+    [
+     "Eine per robots.txt blockierte Seite kann Google ihr noindex nicht zeigen: Google muss die Seite crawlen, um es zu lesen.",
+     ""
+    ],
+    [
+     "Ein noindex in der robots.txt wird nicht unterstützt und bewirkt nichts.",
+     ""
+    ]
+   ]
+  },
+  {
+   "h": "4. Ist das die URL, die Google indexieren soll?",
+   "items": [
+    [
+     "Das Canonical-Tag verweist auf die Seite selbst oder auf die Version, die indexiert werden soll.",
+     ""
+    ],
+    [
+     "In URL Inspection stimmen die vom Nutzer angegebene und die von Google ausgewählte kanonische URL überein.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Interne Links, Sitemap und Weiterleitungen verweisen alle auf dieselbe kanonische URL.",
+     "url-list-cleaner"
+    ]
+   ]
+  },
+  {
+   "h": "5. Kann Google die Seite finden?",
+   "items": [
+    [
+     "Die Seite hat interne Links von Seiten, die Google bereits crawlt – als normale HTML-Links, nicht nur per Script.",
+     ""
+    ],
+    [
+     "Sie steht in der XML-Sitemap, und jede Sitemap-URL liefert 200 ohne Weiterleitungen oder noindex.",
+     "sitemap-generator"
+    ],
+    [
+     "lastmod zeigt nur echte Änderungen. Google nutzt den Wert nur, wenn er durchgehend korrekt ist.",
+     ""
+    ]
+   ]
+  }
+ ],
+ "status_h": "6. Was der Status unter Page indexing bedeutet",
+ "status_cols": [
+  "Status",
+  "Bedeutung",
+  "Was tun"
+ ],
+ "statuses": [
+  [
+   "Discovered – currently not indexed",
+   "Google kennt die URL, hat sie aber noch nicht gecrawlt. Oft wurde das Crawling verschoben, um die Website nicht zu überlasten.",
+   "Stärke die interne Verlinkung und prüfe die Serverkapazität. Bei einer dringenden Seite beantrage die Indexierung."
+  ],
+  [
+   "Crawled – currently not indexed",
+   "Google hat die Seite gecrawlt, aber vorerst nicht indexiert. Sie kann später indexiert werden.",
+   "Kein erneutes Einreichen nötig. Sorg dafür, dass die Seite etwas bietet, was andere indexierte Seiten nicht bieten."
+  ],
+  [
+   "Excluded by ‘noindex’ tag",
+   "Google hat eine noindex-Anweisung gefunden.",
+   "Soll die Seite indexiert werden, entferne die Anweisung aus dem HTML und den HTTP-Headern."
+  ],
+  [
+   "Blocked by robots.txt",
+   "Google kann die Seite nicht crawlen.",
+   "Entferne die Sperre. Um die Seite aus der Suche herauszuhalten, nutze stattdessen noindex."
+  ],
+  [
+   "Duplicate without user-selected canonical",
+   "Google hat eine andere URL als kanonisch ausgewählt.",
+   "Gib die kanonische URL explizit an oder mach den Inhalt klar unterscheidbar."
+  ],
+  [
+   "Soft 404",
+   "Die Seite wirkt wie „Nicht gefunden“, liefert aber 200.",
+   "Liefere ein echtes 404 oder 410 oder gib der Seite echten Inhalt."
+  ],
+  [
+   "Page with redirect",
+   "Eine nicht kanonische URL, die woandershin weiterleitet.",
+   "Meist in Ordnung. Prüfe, ob die Weiterleitung gewollt ist."
+  ],
+  [
+   "Not found (404)",
+   "Die URL liefert 404.",
+   "In Ordnung, wenn die Seite entfernt wurde. Ist sie umgezogen, richte eine 301-Weiterleitung auf die neue URL ein."
+  ]
+ ],
+ "bl_h": "7. Backlinks auf fremden Websites",
+ "bl": [
+  [
+   "Die verlinkende Seite ist erreichbar (200), indexierbar und enthält den Link noch.",
+   ""
+  ],
+  [
+   "Die verlinkende Seite selbst ist im Google-Index. Prüfe die ganze Liste gesammelt.",
+   "SI:checker"
+  ],
+  [
+   "Lege fest, welche Links du zuerst zur Indexierung einreichst.",
+   "backlink-list-prioritizer"
+  ],
+  [
+   "Neue Links kommen in gleichmäßigem Tempo statt in einer einzigen riesigen Spitze.",
+   "drip-feed-planner"
+  ]
+ ],
+ "no_h": "8. Was nicht hilft",
+ "no": [
+  "Dieselbe URL immer wieder neu crawlen lassen. Laut Google wird sie dadurch nicht schneller gecrawlt.",
+  "Die Indexing API für normale Seiten. Sie unterstützt nur Seiten mit JobPosting oder mit BroadcastEvent, eingebettet in ein VideoObject.",
+  "Auf eine feste Frist warten. Laut Google kann das Crawling einige Tage bis einige Wochen dauern."
+ ],
+ "tool_word": "Tool",
+ "promo": "Promo-Code INDEX10: +10 % Bonus-Tokens beim Aufladen deines SpeedyIndex-Guthabens.",
+ "made_by": "Erstellt vom SpeedyIndex-Team",
+ "sources_h": "Quellen",
+ "page_word": "Seite"
+}

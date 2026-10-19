@@ -1,0 +1,184 @@
+{
+ "title": "Sự cố lập chỉ mục: danh sách kiểm tra chẩn đoán",
+ "sub": "Kiểm tra lần lượt từ trên xuống. Mục đầu tiên không đạt thường là nguyên nhân, hãy khắc phục trước khi làm tiếp.",
+ "brandline": "Công cụ miễn phí trên trình duyệt cho sự cố thu thập dữ liệu và lập chỉ mục",
+ "date": "Tháng 10/2026",
+ "legend": "☐ kiểm tra · ✕ không có tác dụng",
+ "sections": [
+  {
+   "h": "1. Xem Google báo cáo gì",
+   "items": [
+    [
+     "Kiểm tra URL trong Search Console (URL Inspection). Ghi lại kết luận và trạng thái Page indexing.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Chạy “Test live URL” để xem trang ở thời điểm hiện tại. Kết quả đã lập chỉ mục có thể cũ hơn lần chỉnh sửa gần nhất.",
+     ""
+    ],
+    [
+     "Với nhiều URL, hãy xuất báo cáo Page indexing và nhóm các URL theo lý do.",
+     "page-indexing-report-analyzer"
+    ],
+    [
+     "Với trang trên trang web không thuộc sở hữu của bạn, như backlink, hãy kiểm tra trạng thái lập chỉ mục của cả danh sách cùng lúc.",
+     "SI:checker"
+    ]
+   ]
+  },
+  {
+   "h": "2. Google có tìm nạp được trang không?",
+   "items": [
+    [
+     "Trang trả về 200. Không phải 404 hay 410, không phải lỗi 5xx, không yêu cầu đăng nhập hay trả phí.",
+     ""
+    ],
+    [
+     "Không phải soft 404, tức là trang trống hoặc trang “không tìm thấy” nhưng trả về mã 200.",
+     ""
+    ],
+    [
+     "Chuyển hướng kết thúc ở trang 200, lý tưởng là chỉ một bước, không có chuỗi hay vòng lặp.",
+     "redirect-map-generator"
+    ],
+    [
+     "Googlebot nhận phản hồi nhanh, không lỗi. Kiểm tra lượt truy cập thực của Googlebot trong nhật ký máy chủ.",
+     "googlebot-log-analyzer"
+    ]
+   ]
+  },
+  {
+   "h": "3. Google có được phép thu thập dữ liệu và lập chỉ mục không?",
+   "items": [
+    [
+     "robots.txt không chặn URL này đối với Googlebot.",
+     "robots-txt-tester"
+    ],
+    [
+     "Không có noindex trong thẻ meta robots hoặc tiêu đề HTTP X-Robots-Tag.",
+     "SI:noindex"
+    ],
+    [
+     "Trang bị chặn trong robots.txt không thể cho Google thấy noindex: Google phải thu thập dữ liệu trang mới đọc được lệnh này.",
+     ""
+    ],
+    [
+     "noindex đặt trong robots.txt không được hỗ trợ và không có tác dụng.",
+     ""
+    ]
+   ]
+  },
+  {
+   "h": "4. Đây có phải URL mà Google nên lập chỉ mục?",
+   "items": [
+    [
+     "Thẻ canonical trỏ đến chính trang đó hoặc phiên bản bạn muốn được lập chỉ mục.",
+     ""
+    ],
+    [
+     "Trong URL Inspection, URL chính tắc do người dùng khai báo và do Google chọn là một.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Liên kết nội bộ, sitemap XML và chuyển hướng đều trỏ đến cùng URL chính tắc đó.",
+     "url-list-cleaner"
+    ]
+   ]
+  },
+  {
+   "h": "5. Google có phát hiện được trang không?",
+   "items": [
+    [
+     "Trang có liên kết nội bộ từ các trang Google đã thu thập dữ liệu, dạng liên kết HTML thông thường, không chỉ qua script.",
+     ""
+    ],
+    [
+     "Trang có trong sitemap XML, và mọi URL trong sitemap đều trả về 200, không chuyển hướng hay noindex.",
+     "sitemap-generator"
+    ],
+    [
+     "lastmod chỉ phản ánh thay đổi thực sự. Google chỉ dùng giá trị này khi nó luôn chính xác.",
+     ""
+    ]
+   ]
+  }
+ ],
+ "status_h": "6. Ý nghĩa của trạng thái Page indexing",
+ "status_cols": [
+  "Trạng thái",
+  "Ý nghĩa",
+  "Cần làm gì"
+ ],
+ "statuses": [
+  [
+   "Discovered – currently not indexed",
+   "Google đã tìm thấy URL nhưng chưa thu thập dữ liệu. Thường Google hoãn thu thập để tránh làm quá tải trang web.",
+   "Tăng cường liên kết nội bộ, kiểm tra năng lực máy chủ. Với trang cấp bách, hãy yêu cầu lập chỉ mục."
+  ],
+  [
+   "Crawled – currently not indexed",
+   "Google đã thu thập dữ liệu trang nhưng tạm thời chưa đưa vào chỉ mục. Trang có thể được lập chỉ mục sau.",
+   "Không cần gửi lại. Đảm bảo trang mang lại giá trị mà các trang đã lập chỉ mục khác không có."
+  ],
+  [
+   "Excluded by ‘noindex’ tag",
+   "Google phát hiện lệnh noindex.",
+   "Nếu trang cần được lập chỉ mục, hãy xóa lệnh này ở cả HTML và tiêu đề HTTP."
+  ],
+  [
+   "Blocked by robots.txt",
+   "Google không thể thu thập dữ liệu trang.",
+   "Gỡ bỏ lệnh chặn. Để loại trang khỏi kết quả tìm kiếm, hãy dùng noindex."
+  ],
+  [
+   "Duplicate without user-selected canonical",
+   "Google đã chọn URL khác làm URL chính tắc.",
+   "Khai báo rõ URL chính tắc hoặc làm cho nội dung khác biệt rõ ràng."
+  ],
+  [
+   "Soft 404",
+   "Trang trông như “không tìm thấy” nhưng trả về 200.",
+   "Trả về mã 404 hoặc 410 thực sự, hoặc bổ sung nội dung thực cho trang."
+  ],
+  [
+   "Page with redirect",
+   "URL không chính tắc chuyển hướng sang nơi khác.",
+   "Thường không sao. Hãy xác nhận chuyển hướng là có chủ đích."
+  ],
+  [
+   "Not found (404)",
+   "URL trả về 404.",
+   "Không sao nếu trang đã bị xóa. Nếu trang đã chuyển, hãy thêm chuyển hướng 301 sang URL mới."
+  ]
+ ],
+ "bl_h": "7. Backlink trên trang web không thuộc sở hữu của bạn",
+ "bl": [
+  [
+   "Trang chứa liên kết đang hoạt động (200), có thể lập chỉ mục và vẫn còn liên kết.",
+   ""
+  ],
+  [
+   "Bản thân trang chứa liên kết đã có trong chỉ mục của Google. Kiểm tra hàng loạt cả danh sách.",
+   "SI:checker"
+  ],
+  [
+   "Chọn ra những liên kết nên gửi lập chỉ mục trước.",
+   "backlink-list-prioritizer"
+  ],
+  [
+   "Liên kết mới xuất hiện đều đặn thay vì tăng vọt cùng lúc.",
+   "drip-feed-planner"
+  ]
+ ],
+ "no_h": "8. Những việc không có tác dụng",
+ "no": [
+  "Yêu cầu thu thập lại cùng một URL nhiều lần. Google cho biết việc này không giúp URL được thu thập nhanh hơn.",
+  "Indexing API cho trang thông thường. API này chỉ hỗ trợ trang có JobPosting hoặc BroadcastEvent được nhúng trong VideoObject.",
+  "Chờ một thời hạn cố định. Theo Google, việc thu thập dữ liệu có thể mất từ vài ngày đến vài tuần."
+ ],
+ "tool_word": "Công cụ",
+ "promo": "Mã khuyến mãi INDEX10: thêm 10% token thưởng khi nạp tiền vào số dư SpeedyIndex.",
+ "made_by": "Do đội ngũ SpeedyIndex thực hiện",
+ "sources_h": "Nguồn",
+ "page_word": "Trang"
+}

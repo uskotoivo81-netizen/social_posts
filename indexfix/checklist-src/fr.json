@@ -1,0 +1,184 @@
+{
+ "title": "Problèmes d’indexation : checklist de diagnostic",
+ "sub": "Procédez de haut en bas. Le premier point en échec est généralement la cause : corrigez-le avant de continuer.",
+ "brandline": "Outils gratuits dans le navigateur pour les problèmes d’exploration et d’indexation",
+ "date": "octobre 2026",
+ "legend": "☐ à vérifier · ✕ inutile",
+ "sections": [
+  {
+   "h": "1. Voir ce que Google signale",
+   "items": [
+    [
+     "Inspectez l’URL dans la Search Console (URL Inspection). Notez le verdict et l’état dans Page indexing.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Lancez « Test live URL » pour voir la page dans son état actuel. Le résultat indexé peut dater d’avant votre dernière modification.",
+     ""
+    ],
+    [
+     "Pour de nombreuses URL, exportez le rapport Page indexing et regroupez les URL par motif.",
+     "page-indexing-report-analyzer"
+    ],
+    [
+     "Pour les pages de sites qui ne vous appartiennent pas, comme les backlinks, vérifiez l’état d’indexation de toute la liste en une fois.",
+     "SI:checker"
+    ]
+   ]
+  },
+  {
+   "h": "2. Google peut-il récupérer la page ?",
+   "items": [
+    [
+     "La page renvoie 200. Pas de 404 ni de 410, pas d’erreur 5xx, ni connexion ni paywall.",
+     ""
+    ],
+    [
+     "Pas de soft 404 : une page vide ou « introuvable » servie avec le code 200.",
+     ""
+    ],
+    [
+     "Les redirections aboutissent à une page 200, idéalement en un seul saut, sans chaîne ni boucle.",
+     "redirect-map-generator"
+    ],
+    [
+     "Googlebot reçoit des réponses rapides et sans erreur. Vérifiez ses visites réelles dans les journaux du serveur.",
+     "googlebot-log-analyzer"
+    ]
+   ]
+  },
+  {
+   "h": "3. Google a-t-il le droit de l’explorer et de l’indexer ?",
+   "items": [
+    [
+     "robots.txt ne bloque pas l’URL pour Googlebot.",
+     "robots-txt-tester"
+    ],
+    [
+     "Pas de noindex dans la balise meta robots ni dans l’en-tête HTTP X-Robots-Tag.",
+     "SI:noindex"
+    ],
+    [
+     "Une page bloquée dans robots.txt ne peut pas montrer son noindex à Google : Google doit explorer la page pour le lire.",
+     ""
+    ],
+    [
+     "Un noindex écrit dans robots.txt n’est pas pris en charge et n’a aucun effet.",
+     ""
+    ]
+   ]
+  },
+  {
+   "h": "4. Est-ce l’URL que Google doit indexer ?",
+   "items": [
+    [
+     "La balise canonique pointe vers la page elle-même ou vers la version à indexer.",
+     ""
+    ],
+    [
+     "Dans URL Inspection, l’URL canonique déclarée par l’utilisateur et celle sélectionnée par Google sont identiques.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Liens internes, sitemap et redirections pointent tous vers cette même URL canonique.",
+     "url-list-cleaner"
+    ]
+   ]
+  },
+  {
+   "h": "5. Google peut-il la découvrir ?",
+   "items": [
+    [
+     "La page reçoit des liens internes depuis des pages que Google explore déjà, sous forme de liens HTML classiques, pas uniquement via des scripts.",
+     ""
+    ],
+    [
+     "Elle figure dans le sitemap XML, et chaque URL du sitemap renvoie 200 sans redirection ni noindex.",
+     "sitemap-generator"
+    ],
+    [
+     "lastmod ne reflète que des modifications réelles. Google ne l’utilise que s’il est toujours exact.",
+     ""
+    ]
+   ]
+  }
+ ],
+ "status_h": "6. Ce que signifie l’état dans Page indexing",
+ "status_cols": [
+  "État",
+  "Signification",
+  "Que faire"
+ ],
+ "statuses": [
+  [
+   "Discovered – currently not indexed",
+   "Google a trouvé l’URL mais ne l’a pas encore explorée. Souvent, l’exploration a été reportée pour ne pas surcharger le site.",
+   "Renforcez le maillage interne, vérifiez la capacité du serveur. Pour une page urgente, demandez l’indexation."
+  ],
+  [
+   "Crawled – currently not indexed",
+   "Google a exploré la page et l’a laissée hors de l’index pour l’instant. Elle pourra être indexée plus tard.",
+   "Inutile de la soumettre à nouveau. Assurez-vous qu’elle apporte ce que les autres pages indexées n’apportent pas."
+  ],
+  [
+   "Excluded by ‘noindex’ tag",
+   "Google a détecté une directive noindex.",
+   "Si la page doit être indexée, supprimez la directive du HTML et des en-têtes HTTP."
+  ],
+  [
+   "Blocked by robots.txt",
+   "Google ne peut pas explorer la page.",
+   "Supprimez le blocage. Pour exclure la page des résultats, utilisez plutôt noindex."
+  ],
+  [
+   "Duplicate without user-selected canonical",
+   "Google a choisi une autre URL comme URL canonique.",
+   "Déclarez explicitement l’URL canonique ou rendez le contenu nettement différent."
+  ],
+  [
+   "Soft 404",
+   "La page ressemble à une page « introuvable » mais renvoie 200.",
+   "Renvoyez une vraie 404 ou 410, ou donnez à la page un vrai contenu."
+  ],
+  [
+   "Page with redirect",
+   "URL non canonique qui redirige ailleurs.",
+   "Généralement sans problème. Vérifiez que la redirection est voulue."
+  ],
+  [
+   "Not found (404)",
+   "L’URL renvoie 404.",
+   "Normal si la page a été supprimée. Si elle a été déplacée, ajoutez une redirection 301 vers la nouvelle URL."
+  ]
+ ],
+ "bl_h": "7. Backlinks sur des sites qui ne vous appartiennent pas",
+ "bl": [
+  [
+   "La page référente est en ligne (200), indexable et contient toujours le lien.",
+   ""
+  ],
+  [
+   "La page référente elle-même est dans l’index de Google. Vérifiez toute la liste en masse.",
+   "SI:checker"
+  ],
+  [
+   "Choisissez les liens à envoyer en priorité à l’indexation.",
+   "backlink-list-prioritizer"
+  ],
+  [
+   "Les nouveaux liens arrivent à un rythme régulier, pas en un seul pic massif.",
+   "drip-feed-planner"
+  ]
+ ],
+ "no_h": "8. Ce qui ne sert à rien",
+ "no": [
+  "Redemander encore et encore l’exploration de la même URL. Selon Google, elle ne sera pas explorée plus vite.",
+  "L’Indexing API pour des pages classiques. Elle ne prend en charge que les pages avec JobPosting ou BroadcastEvent intégré dans un VideoObject.",
+  "Attendre un délai fixe. Selon Google, l’exploration peut prendre de quelques jours à quelques semaines."
+ ],
+ "tool_word": "Outil",
+ "promo": "Code promo INDEX10 : +10 % de tokens bonus lors de la recharge de votre solde SpeedyIndex.",
+ "made_by": "Réalisé par l’équipe SpeedyIndex",
+ "sources_h": "Sources",
+ "page_word": "Page"
+}

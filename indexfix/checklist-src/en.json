@@ -1,0 +1,67 @@
+{
+ "title": "Indexing problems: diagnostic checklist",
+ "sub": "Go from top to bottom. The first check that fails is usually the cause, so fix it before moving on.",
+ "brandline": "Free browser tools for crawling and indexing problems",
+ "date": "October 2026",
+ "legend": "☐ check · ✕ does not help",
+ "sections": [
+  {"h": "1. Find out what Google reports", "items": [
+   ["Inspect the URL in Search Console (URL Inspection). Note the verdict and the Page indexing status.", "url-inspection-decoder"],
+   ["Run “Test live URL” to see the page as it is now. The indexed result can be older than your last change.", ""],
+   ["For many URLs, export the Page indexing report and group the URLs by reason.", "page-indexing-report-analyzer"],
+   ["For pages on sites you don't own, such as backlinks, check the index status of the whole list at once.", "SI:checker"]
+  ]},
+  {"h": "2. Can Google fetch the page?", "items": [
+   ["The page returns 200. Not 404 or 410, not a 5xx error, not a login or paywall.", ""],
+   ["It is not a soft 404: an empty or “not found” page served with status 200.", ""],
+   ["Redirects end on a 200 page, ideally in one hop, with no chains or loops.", "redirect-map-generator"],
+   ["Googlebot gets fast, error-free answers. Check its real visits in the server logs.", "googlebot-log-analyzer"]
+  ]},
+  {"h": "3. Is Google allowed to crawl and index it?", "items": [
+   ["robots.txt does not disallow the URL for Googlebot.", "robots-txt-tester"],
+   ["No noindex in the robots meta tag or in the X-Robots-Tag HTTP header.", "SI:noindex"],
+   ["A page blocked in robots.txt can't show Google its noindex: Google has to crawl the page to read it.", ""],
+   ["noindex written inside robots.txt is not supported and does nothing.", ""]
+  ]},
+  {"h": "4. Is this the URL Google should index?", "items": [
+   ["The canonical tag points to the page itself or to the version you want indexed.", ""],
+   ["In URL Inspection, the user-declared and the Google-selected canonical are the same.", "url-inspection-decoder"],
+   ["Internal links, the sitemap and redirects all point to that same canonical URL.", "url-list-cleaner"]
+  ]},
+  {"h": "5. Can Google discover it?", "items": [
+   ["The page has internal links from pages Google already crawls, as plain HTML links, not only through scripts.", ""],
+   ["It is listed in the XML sitemap, and every sitemap URL returns 200 without redirects or noindex.", "sitemap-generator"],
+   ["lastmod shows real changes only. Google uses it only when it is consistently accurate.", ""]
+  ]}
+ ],
+ "status_h": "6. What the Page indexing status means",
+ "status_cols": ["Status", "What it means", "What to do"],
+ "statuses": [
+  ["Discovered – currently not indexed", "Google found the URL but hasn't crawled it yet. Often the crawl was postponed so the site wouldn't be overloaded.", "Strengthen internal links, check server capacity. For an urgent page, request indexing."],
+  ["Crawled – currently not indexed", "Google crawled the page and left it out of the index for now. It may be indexed later.", "No need to resubmit. Make sure the page adds something other indexed pages don't."],
+  ["Excluded by ‘noindex’ tag", "Google saw a noindex directive.", "If the page should be indexed, remove it, in the HTML and in the HTTP headers."],
+  ["Blocked by robots.txt", "Google can't crawl the page.", "Remove the block. To keep the page out of search, use noindex instead."],
+  ["Duplicate without user-selected canonical", "Google chose another URL as the canonical.", "Declare the canonical explicitly or make the content clearly different."],
+  ["Soft 404", "The page looks like “not found” but returns 200.", "Return a real 404 or 410, or give the page real content."],
+  ["Page with redirect", "A non-canonical URL that redirects elsewhere.", "Usually fine. Confirm the redirect is intended."],
+  ["Not found (404)", "The URL returns 404.", "Fine if the page was removed. If it moved, add a 301 redirect to the new URL."]
+ ],
+ "bl_h": "7. Backlinks on sites you don't own",
+ "bl": [
+  ["The linking page is live (200), indexable and still contains the link.", ""],
+  ["The linking page itself is in Google's index. Check the whole list in bulk.", "SI:checker"],
+  ["Pick which links are worth sending for indexing first.", "backlink-list-prioritizer"],
+  ["New links arrive at a steady pace instead of one giant spike.", "drip-feed-planner"]
+ ],
+ "no_h": "8. What does not help",
+ "no": [
+  "Requesting a recrawl of the same URL again and again. Google says it won't be crawled any faster.",
+  "The Indexing API for regular pages. It only supports pages with JobPosting or BroadcastEvent embedded in a VideoObject.",
+  "Waiting for a fixed deadline. Google says crawling can take anywhere from a few days to a few weeks."
+ ],
+ "tool_word": "Tool",
+ "promo": "Promo code INDEX10: +10% bonus tokens when you top up your SpeedyIndex balance.",
+ "made_by": "Made by the SpeedyIndex team",
+ "sources_h": "Sources",
+ "page_word": "Page"
+}

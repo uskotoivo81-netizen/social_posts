@@ -1,0 +1,184 @@
+{
+ "title": "Problemas de indexación: checklist de diagnóstico",
+ "sub": "Revisa de arriba abajo. La primera comprobación que falla suele ser la causa: corrígela antes de seguir.",
+ "brandline": "Herramientas gratuitas en el navegador para problemas de rastreo e indexación",
+ "date": "octubre de 2026",
+ "legend": "☐ comprobar · ✕ no sirve",
+ "sections": [
+  {
+   "h": "1. Averigua qué informa Google",
+   "items": [
+    [
+     "Inspecciona la URL en Search Console (URL Inspection). Anota el veredicto y el estado en Page indexing.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Ejecuta «Test live URL» para ver la página tal como está ahora. El resultado indexado puede ser anterior a tu último cambio.",
+     ""
+    ],
+    [
+     "Si son muchas URLs, exporta el informe Page indexing y agrupa las URLs por motivo.",
+     "page-indexing-report-analyzer"
+    ],
+    [
+     "Para páginas de sitios que no son tuyos, como backlinks, comprueba el estado de indexación de toda la lista a la vez.",
+     "SI:checker"
+    ]
+   ]
+  },
+  {
+   "h": "2. ¿Puede Google obtener la página?",
+   "items": [
+    [
+     "La página devuelve 200. No 404 ni 410, ni un error 5xx, ni un login o muro de pago.",
+     ""
+    ],
+    [
+     "No es un soft 404: una página vacía o de «no encontrado» servida con estado 200.",
+     ""
+    ],
+    [
+     "Las redirecciones terminan en una página 200, idealmente en un solo salto, sin cadenas ni bucles.",
+     "redirect-map-generator"
+    ],
+    [
+     "Googlebot recibe respuestas rápidas y sin errores. Comprueba sus visitas reales en los registros del servidor.",
+     "googlebot-log-analyzer"
+    ]
+   ]
+  },
+  {
+   "h": "3. ¿Puede Google rastrearla e indexarla?",
+   "items": [
+    [
+     "robots.txt no bloquea la URL para Googlebot.",
+     "robots-txt-tester"
+    ],
+    [
+     "Sin noindex en la metaetiqueta robots ni en el encabezado HTTP X-Robots-Tag.",
+     "SI:noindex"
+    ],
+    [
+     "Una página bloqueada en robots.txt no puede mostrarle a Google su noindex: Google tiene que rastrearla para leerlo.",
+     ""
+    ],
+    [
+     "Un noindex escrito dentro de robots.txt no se admite y no tiene ningún efecto.",
+     ""
+    ]
+   ]
+  },
+  {
+   "h": "4. ¿Es esta la URL que Google debe indexar?",
+   "items": [
+    [
+     "La etiqueta canónica apunta a la propia página o a la versión que quieres indexar.",
+     ""
+    ],
+    [
+     "En URL Inspection, la URL canónica declarada por el usuario y la seleccionada por Google coinciden.",
+     "url-inspection-decoder"
+    ],
+    [
+     "Los enlaces internos, el sitemap y las redirecciones apuntan a esa misma URL canónica.",
+     "url-list-cleaner"
+    ]
+   ]
+  },
+  {
+   "h": "5. ¿Puede Google descubrirla?",
+   "items": [
+    [
+     "La página recibe enlaces internos desde páginas que Google ya rastrea, como enlaces HTML normales, no solo mediante scripts.",
+     ""
+    ],
+    [
+     "Aparece en el sitemap XML, y todas las URLs del sitemap devuelven 200 sin redirecciones ni noindex.",
+     "sitemap-generator"
+    ],
+    [
+     "lastmod solo refleja cambios reales. Google solo lo usa si es exacto de forma constante.",
+     ""
+    ]
+   ]
+  }
+ ],
+ "status_h": "6. Qué significa el estado en Page indexing",
+ "status_cols": [
+  "Estado",
+  "Qué significa",
+  "Qué hacer"
+ ],
+ "statuses": [
+  [
+   "Discovered – currently not indexed",
+   "Google encontró la URL pero aún no la ha rastreado. A menudo el rastreo se aplazó para no sobrecargar el sitio.",
+   "Refuerza los enlaces internos y revisa la capacidad del servidor. Si la página es urgente, solicita la indexación."
+  ],
+  [
+   "Crawled – currently not indexed",
+   "Google rastreó la página y, por ahora, la dejó fuera del índice. Puede indexarse más adelante.",
+   "No hace falta volver a enviarla. Asegúrate de que aporta algo que otras páginas indexadas no aportan."
+  ],
+  [
+   "Excluded by ‘noindex’ tag",
+   "Google detectó una directiva noindex.",
+   "Si la página debe indexarse, elimina la directiva del HTML y de los encabezados HTTP."
+  ],
+  [
+   "Blocked by robots.txt",
+   "Google no puede rastrear la página.",
+   "Quita el bloqueo. Para que la página no aparezca en la búsqueda, usa noindex."
+  ],
+  [
+   "Duplicate without user-selected canonical",
+   "Google eligió otra URL como canónica.",
+   "Declara la URL canónica de forma explícita o haz que el contenido sea claramente distinto."
+  ],
+  [
+   "Soft 404",
+   "La página parece de «no encontrado» pero devuelve 200.",
+   "Devuelve un 404 o 410 real, o dale contenido real a la página."
+  ],
+  [
+   "Page with redirect",
+   "Una URL no canónica que redirige a otra.",
+   "Suele estar bien. Confirma que la redirección es intencionada."
+  ],
+  [
+   "Not found (404)",
+   "La URL devuelve 404.",
+   "Está bien si eliminaste la página. Si se movió, añade una redirección 301 a la nueva URL."
+  ]
+ ],
+ "bl_h": "7. Backlinks en sitios que no son tuyos",
+ "bl": [
+  [
+   "La página que enlaza está activa (200), es indexable y aún contiene el enlace.",
+   ""
+  ],
+  [
+   "La propia página que enlaza está en el índice de Google. Comprueba toda la lista en bloque.",
+   "SI:checker"
+  ],
+  [
+   "Elige qué enlaces merece la pena enviar primero a indexar.",
+   "backlink-list-prioritizer"
+  ],
+  [
+   "Los enlaces nuevos llegan a un ritmo constante, no en un único pico enorme.",
+   "drip-feed-planner"
+  ]
+ ],
+ "no_h": "8. Lo que no sirve",
+ "no": [
+  "Pedir una y otra vez que se vuelva a rastrear la misma URL. Google dice que no se rastreará más rápido.",
+  "La Indexing API para páginas normales. Solo admite páginas con JobPosting o BroadcastEvent insertado en un VideoObject.",
+  "Esperar un plazo fijo. Google dice que el rastreo puede tardar desde unos días hasta unas semanas."
+ ],
+ "tool_word": "Herramienta",
+ "promo": "Código promocional INDEX10: +10 % de tokens extra al recargar tu saldo de SpeedyIndex.",
+ "made_by": "Hecho por el equipo de SpeedyIndex",
+ "sources_h": "Fuentes",
+ "page_word": "Pág."
+}
