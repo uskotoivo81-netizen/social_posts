@@ -4,9 +4,9 @@
 
 > IndexFix Tools — набор бесплатных браузерных инструментов для диагностики проблем со сканированием и индексацией в Google. Каждый инструмент решает одну задачу: расшифровывает отчёт URL Inspection, группирует URL из отчёта Page indexing, проверяет правила robots.txt или создаёт файл Sitemap. Всё работает в браузере: регистрация не нужна, а данные никуда не передаются.
 
-**Сайт:** https://indexfix-tools.lindabjorkvin.workers.dev/ru/
+**Сайт:** https://indexfixtools.com/ru/
 
-Языки: [English](https://indexfix-tools.lindabjorkvin.workers.dev/) · [Русский](https://indexfix-tools.lindabjorkvin.workers.dev/ru/) · [Українська](https://indexfix-tools.lindabjorkvin.workers.dev/uk/) · [Español](https://indexfix-tools.lindabjorkvin.workers.dev/es/) · [Deutsch](https://indexfix-tools.lindabjorkvin.workers.dev/de/) · [Français](https://indexfix-tools.lindabjorkvin.workers.dev/fr/) · [Tiếng Việt](https://indexfix-tools.lindabjorkvin.workers.dev/vi/)
+Языки: [English](https://indexfixtools.com/) · [Русский](https://indexfixtools.com/ru/) · [Українська](https://indexfixtools.com/uk/) · [Español](https://indexfixtools.com/es/) · [Deutsch](https://indexfixtools.com/de/) · [Français](https://indexfixtools.com/fr/) · [Tiếng Việt](https://indexfixtools.com/vi/)
 
 ## Содержание
 
@@ -29,7 +29,7 @@
 
 - Бесплатно и без регистрации.
 - Файлы и списки URL обрабатываются в браузере и не загружаются на сервер.
-- Исключение — онлайн-проверки, которые вы запускаете сами: загрузка robots.txt по адресу сайта, импорт Sitemap по URL и проверка переадресаций. Подробнее — на странице [О проекте](https://indexfix-tools.lindabjorkvin.workers.dev/ru/about/).
+- Исключение — онлайн-проверки, которые вы запускаете сами: загрузка robots.txt по адресу сайта, импорт Sitemap по URL и проверка переадресаций. Подробнее — на странице [О проекте](https://indexfixtools.com/ru/about/).
 - Результаты можно скопировать или скачать (TXT, CSV, XML — в зависимости от инструмента).
 - Отчёты Search Console инструменты читают в английской формулировке: при необходимости откройте Search Console с параметром `?hl=en`.
 
@@ -55,7 +55,7 @@
 
 Вставьте отчёт URL Inspection и узнайте, что означает каждое поле и что исправить в первую очередь.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/url-inspection-decoder/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/url-inspection-decoder/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/url-inspection-decoder/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/url-inspection-decoder/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/url-inspection-decoder/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/url-inspection-decoder/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/url-inspection-decoder/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/url-inspection-decoder/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/url-inspection-decoder/)
+**Открыть:** [indexfixtools.com/ru/url-inspection-decoder/](https://indexfixtools.com/ru/url-inspection-decoder/) · другие языки: [EN](https://indexfixtools.com/url-inspection-decoder/) · [RU](https://indexfixtools.com/ru/url-inspection-decoder/) · [UK](https://indexfixtools.com/uk/url-inspection-decoder/) · [ES](https://indexfixtools.com/es/url-inspection-decoder/) · [DE](https://indexfixtools.com/de/url-inspection-decoder/) · [FR](https://indexfixtools.com/fr/url-inspection-decoder/) · [VI](https://indexfixtools.com/vi/url-inspection-decoder/)
 
 **Как пользоваться**
 
@@ -77,7 +77,7 @@
 
 Сгруппируйте выгруженные неиндексированные URL по причине, папке и шаблону адреса и получите список для повторной проверки.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/page-indexing-report-analyzer/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/page-indexing-report-analyzer/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/page-indexing-report-analyzer/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/page-indexing-report-analyzer/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/page-indexing-report-analyzer/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/page-indexing-report-analyzer/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/page-indexing-report-analyzer/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/page-indexing-report-analyzer/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/page-indexing-report-analyzer/)
+**Открыть:** [indexfixtools.com/ru/page-indexing-report-analyzer/](https://indexfixtools.com/ru/page-indexing-report-analyzer/) · другие языки: [EN](https://indexfixtools.com/page-indexing-report-analyzer/) · [RU](https://indexfixtools.com/ru/page-indexing-report-analyzer/) · [UK](https://indexfixtools.com/uk/page-indexing-report-analyzer/) · [ES](https://indexfixtools.com/es/page-indexing-report-analyzer/) · [DE](https://indexfixtools.com/de/page-indexing-report-analyzer/) · [FR](https://indexfixtools.com/fr/page-indexing-report-analyzer/) · [VI](https://indexfixtools.com/vi/page-indexing-report-analyzer/)
 
 **Как пользоваться**
 
@@ -99,7 +99,7 @@
 
 Удалите дубли и параметры отслеживания и приведите беспорядочный список ссылок к единому виду.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/url-list-cleaner/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/url-list-cleaner/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/url-list-cleaner/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/url-list-cleaner/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/url-list-cleaner/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/url-list-cleaner/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/url-list-cleaner/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/url-list-cleaner/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/url-list-cleaner/)
+**Открыть:** [indexfixtools.com/ru/url-list-cleaner/](https://indexfixtools.com/ru/url-list-cleaner/) · другие языки: [EN](https://indexfixtools.com/url-list-cleaner/) · [RU](https://indexfixtools.com/ru/url-list-cleaner/) · [UK](https://indexfixtools.com/uk/url-list-cleaner/) · [ES](https://indexfixtools.com/es/url-list-cleaner/) · [DE](https://indexfixtools.com/de/url-list-cleaner/) · [FR](https://indexfixtools.com/fr/url-list-cleaner/) · [VI](https://indexfixtools.com/vi/url-list-cleaner/)
 
 **Как пользоваться**
 
@@ -121,7 +121,7 @@
 
 Оставьте одну лучшую ссылку с каждого ссылающегося домена и отметьте ссылки, к которым стоит присмотреться.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/backlink-list-prioritizer/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/backlink-list-prioritizer/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/backlink-list-prioritizer/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/backlink-list-prioritizer/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/backlink-list-prioritizer/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/backlink-list-prioritizer/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/backlink-list-prioritizer/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/backlink-list-prioritizer/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/backlink-list-prioritizer/)
+**Открыть:** [indexfixtools.com/ru/backlink-list-prioritizer/](https://indexfixtools.com/ru/backlink-list-prioritizer/) · другие языки: [EN](https://indexfixtools.com/backlink-list-prioritizer/) · [RU](https://indexfixtools.com/ru/backlink-list-prioritizer/) · [UK](https://indexfixtools.com/uk/backlink-list-prioritizer/) · [ES](https://indexfixtools.com/es/backlink-list-prioritizer/) · [DE](https://indexfixtools.com/de/backlink-list-prioritizer/) · [FR](https://indexfixtools.com/fr/backlink-list-prioritizer/) · [VI](https://indexfixtools.com/vi/backlink-list-prioritizer/)
 
 **Как пользоваться**
 
@@ -143,7 +143,7 @@
 
 Распределите новые ссылки по дням в ровном темпе и выгрузите график.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/drip-feed-planner/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/drip-feed-planner/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/drip-feed-planner/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/drip-feed-planner/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/drip-feed-planner/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/drip-feed-planner/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/drip-feed-planner/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/drip-feed-planner/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/drip-feed-planner/)
+**Открыть:** [indexfixtools.com/ru/drip-feed-planner/](https://indexfixtools.com/ru/drip-feed-planner/) · другие языки: [EN](https://indexfixtools.com/drip-feed-planner/) · [RU](https://indexfixtools.com/ru/drip-feed-planner/) · [UK](https://indexfixtools.com/uk/drip-feed-planner/) · [ES](https://indexfixtools.com/es/drip-feed-planner/) · [DE](https://indexfixtools.com/de/drip-feed-planner/) · [FR](https://indexfixtools.com/fr/drip-feed-planner/) · [VI](https://indexfixtools.com/vi/drip-feed-planner/)
 
 **Как пользоваться**
 
@@ -165,7 +165,7 @@
 
 Узнайте, какие URL файл robots.txt закрывает для Googlebot и какая строка это определяет.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/robots-txt-tester/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/robots-txt-tester/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/robots-txt-tester/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/robots-txt-tester/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/robots-txt-tester/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/robots-txt-tester/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/robots-txt-tester/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/robots-txt-tester/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/robots-txt-tester/)
+**Открыть:** [indexfixtools.com/ru/robots-txt-tester/](https://indexfixtools.com/ru/robots-txt-tester/) · другие языки: [EN](https://indexfixtools.com/robots-txt-tester/) · [RU](https://indexfixtools.com/ru/robots-txt-tester/) · [UK](https://indexfixtools.com/uk/robots-txt-tester/) · [ES](https://indexfixtools.com/es/robots-txt-tester/) · [DE](https://indexfixtools.com/de/robots-txt-tester/) · [FR](https://indexfixtools.com/fr/robots-txt-tester/) · [VI](https://indexfixtools.com/vi/robots-txt-tester/)
 
 **Как пользоваться**
 
@@ -187,7 +187,7 @@
 
 Найдите в логах сервера настоящие визиты Googlebot и посмотрите, что он сканирует и какие URL отдают ошибки.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/googlebot-log-analyzer/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/googlebot-log-analyzer/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/googlebot-log-analyzer/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/googlebot-log-analyzer/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/googlebot-log-analyzer/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/googlebot-log-analyzer/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/googlebot-log-analyzer/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/googlebot-log-analyzer/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/googlebot-log-analyzer/)
+**Открыть:** [indexfixtools.com/ru/googlebot-log-analyzer/](https://indexfixtools.com/ru/googlebot-log-analyzer/) · другие языки: [EN](https://indexfixtools.com/googlebot-log-analyzer/) · [RU](https://indexfixtools.com/ru/googlebot-log-analyzer/) · [UK](https://indexfixtools.com/uk/googlebot-log-analyzer/) · [ES](https://indexfixtools.com/es/googlebot-log-analyzer/) · [DE](https://indexfixtools.com/de/googlebot-log-analyzer/) · [FR](https://indexfixtools.com/fr/googlebot-log-analyzer/) · [VI](https://indexfixtools.com/vi/googlebot-log-analyzer/)
 
 **Как пользоваться**
 
@@ -209,7 +209,7 @@
 
 Превратите список URL в корректные XML-файлы Sitemap, разбитые с учётом ограничений Google.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/sitemap-generator/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/sitemap-generator/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/sitemap-generator/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/sitemap-generator/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/sitemap-generator/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/sitemap-generator/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/sitemap-generator/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/sitemap-generator/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/sitemap-generator/)
+**Открыть:** [indexfixtools.com/ru/sitemap-generator/](https://indexfixtools.com/ru/sitemap-generator/) · другие языки: [EN](https://indexfixtools.com/sitemap-generator/) · [RU](https://indexfixtools.com/ru/sitemap-generator/) · [UK](https://indexfixtools.com/uk/sitemap-generator/) · [ES](https://indexfixtools.com/es/sitemap-generator/) · [DE](https://indexfixtools.com/de/sitemap-generator/) · [FR](https://indexfixtools.com/fr/sitemap-generator/) · [VI](https://indexfixtools.com/vi/sitemap-generator/)
 
 **Как пользоваться**
 
@@ -231,7 +231,7 @@
 
 Превратите пары старый→новый URL в правила переадресации для Apache или Nginx с исправленными цепочками.
 
-**Открыть:** [indexfix-tools.lindabjorkvin.workers.dev/ru/redirect-map-generator/](https://indexfix-tools.lindabjorkvin.workers.dev/ru/redirect-map-generator/) · другие языки: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/redirect-map-generator/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/redirect-map-generator/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/redirect-map-generator/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/redirect-map-generator/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/redirect-map-generator/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/redirect-map-generator/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/redirect-map-generator/)
+**Открыть:** [indexfixtools.com/ru/redirect-map-generator/](https://indexfixtools.com/ru/redirect-map-generator/) · другие языки: [EN](https://indexfixtools.com/redirect-map-generator/) · [RU](https://indexfixtools.com/ru/redirect-map-generator/) · [UK](https://indexfixtools.com/uk/redirect-map-generator/) · [ES](https://indexfixtools.com/es/redirect-map-generator/) · [DE](https://indexfixtools.com/de/redirect-map-generator/) · [FR](https://indexfixtools.com/fr/redirect-map-generator/) · [VI](https://indexfixtools.com/vi/redirect-map-generator/)
 
 **Как пользоваться**
 
@@ -251,7 +251,7 @@
 
 **Проблемы с индексированием: чек-лист диагностики** — Пошаговая проверка: статус в Search Console, доступность страницы, robots.txt, noindex, канонический URL, переадресации, файл Sitemap и обратные ссылки — и что делать в каждом случае.
 
-Скачать: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-en.pdf) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-ru.pdf) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-uk.pdf) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-es.pdf) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-de.pdf) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-fr.pdf) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-vi.pdf)
+Скачать: [EN](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-en.pdf) · [RU](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-ru.pdf) · [UK](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-uk.pdf) · [ES](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-es.pdf) · [DE](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-de.pdf) · [FR](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-fr.pdf) · [VI](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-vi.pdf)
 
 Подробнее: [downloads/README.md](downloads/README.md).
 

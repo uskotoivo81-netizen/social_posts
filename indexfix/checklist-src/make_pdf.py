@@ -3,7 +3,7 @@ from playwright.async_api import async_playwright
 H = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.join(H, '..', 'site2', 'src')
 sys.argv = ['x', '/tmp/x', 'https://indexfix-tools.lindabjorkvin.workers.dev']
-HOST = 'https://indexfix-tools.lindabjorkvin.workers.dev'
+HOST = 'https://indexfixtools.com'
 FONT = os.path.join(H, '..', 'ig', 'node_modules', '@fontsource', 'inter', 'files')
 e = html.escape
 SI_HOST = {"en": "https://en.speedyindex.com", "ru": "https://speedyindex.com", "fr": "https://fr.speedyindex.com", "es": "https://es.speedyindex.com", "uk": "https://ua.speedyindex.com"}

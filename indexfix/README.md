@@ -4,9 +4,9 @@
 
 > IndexFix Tools is a set of free browser tools for Google crawling and indexing problems. Each tool solves one job, such as decoding a URL Inspection report, grouping URLs from the Page indexing report, testing robots.txt rules or building a sitemap. Everything runs in your browser: no sign-up, and your data is not uploaded.
 
-**Site:** https://indexfix-tools.lindabjorkvin.workers.dev/
+**Site:** https://indexfixtools.com/
 
-Languages: [English](https://indexfix-tools.lindabjorkvin.workers.dev/) · [Русский](https://indexfix-tools.lindabjorkvin.workers.dev/ru/) · [Українська](https://indexfix-tools.lindabjorkvin.workers.dev/uk/) · [Español](https://indexfix-tools.lindabjorkvin.workers.dev/es/) · [Deutsch](https://indexfix-tools.lindabjorkvin.workers.dev/de/) · [Français](https://indexfix-tools.lindabjorkvin.workers.dev/fr/) · [Tiếng Việt](https://indexfix-tools.lindabjorkvin.workers.dev/vi/)
+Languages: [English](https://indexfixtools.com/) · [Русский](https://indexfixtools.com/ru/) · [Українська](https://indexfixtools.com/uk/) · [Español](https://indexfixtools.com/es/) · [Deutsch](https://indexfixtools.com/de/) · [Français](https://indexfixtools.com/fr/) · [Tiếng Việt](https://indexfixtools.com/vi/)
 
 ## Contents
 
@@ -29,7 +29,7 @@ Languages: [English](https://indexfix-tools.lindabjorkvin.workers.dev/) · [Ру
 
 - Free, no sign-up.
 - Files and URL lists are processed in your browser and are not uploaded.
-- The exception is the online checks you start yourself: loading robots.txt from a site address, importing a sitemap by URL and checking redirects. See the [About page](https://indexfix-tools.lindabjorkvin.workers.dev/about/).
+- The exception is the online checks you start yourself: loading robots.txt from a site address, importing a sitemap by URL and checking redirects. See the [About page](https://indexfixtools.com/about/).
 - Results can be copied or downloaded (TXT, CSV or XML, depending on the tool).
 - Search Console reports are read in their English wording: open Search Console with `?hl=en` if needed.
 
@@ -55,7 +55,7 @@ Languages: [English](https://indexfix-tools.lindabjorkvin.workers.dev/) · [Ру
 
 Paste a URL Inspection report and see what every field means and what to fix first.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/url-inspection-decoder/](https://indexfix-tools.lindabjorkvin.workers.dev/url-inspection-decoder/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/url-inspection-decoder/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/url-inspection-decoder/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/url-inspection-decoder/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/url-inspection-decoder/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/url-inspection-decoder/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/url-inspection-decoder/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/url-inspection-decoder/)
+**Open:** [indexfixtools.com/url-inspection-decoder/](https://indexfixtools.com/url-inspection-decoder/) · other languages: [EN](https://indexfixtools.com/url-inspection-decoder/) · [RU](https://indexfixtools.com/ru/url-inspection-decoder/) · [UK](https://indexfixtools.com/uk/url-inspection-decoder/) · [ES](https://indexfixtools.com/es/url-inspection-decoder/) · [DE](https://indexfixtools.com/de/url-inspection-decoder/) · [FR](https://indexfixtools.com/fr/url-inspection-decoder/) · [VI](https://indexfixtools.com/vi/url-inspection-decoder/)
 
 **How to use**
 
@@ -77,7 +77,7 @@ Paste a URL Inspection report and see what every field means and what to fix fir
 
 Group exported “not indexed” URLs by reason, folder and URL pattern, and get a list worth rechecking.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/page-indexing-report-analyzer/](https://indexfix-tools.lindabjorkvin.workers.dev/page-indexing-report-analyzer/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/page-indexing-report-analyzer/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/page-indexing-report-analyzer/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/page-indexing-report-analyzer/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/page-indexing-report-analyzer/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/page-indexing-report-analyzer/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/page-indexing-report-analyzer/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/page-indexing-report-analyzer/)
+**Open:** [indexfixtools.com/page-indexing-report-analyzer/](https://indexfixtools.com/page-indexing-report-analyzer/) · other languages: [EN](https://indexfixtools.com/page-indexing-report-analyzer/) · [RU](https://indexfixtools.com/ru/page-indexing-report-analyzer/) · [UK](https://indexfixtools.com/uk/page-indexing-report-analyzer/) · [ES](https://indexfixtools.com/es/page-indexing-report-analyzer/) · [DE](https://indexfixtools.com/de/page-indexing-report-analyzer/) · [FR](https://indexfixtools.com/fr/page-indexing-report-analyzer/) · [VI](https://indexfixtools.com/vi/page-indexing-report-analyzer/)
 
 **How to use**
 
@@ -99,7 +99,7 @@ Group exported “not indexed” URLs by reason, folder and URL pattern, and get
 
 Remove duplicates and tracking parameters and normalise a messy list of links.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/url-list-cleaner/](https://indexfix-tools.lindabjorkvin.workers.dev/url-list-cleaner/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/url-list-cleaner/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/url-list-cleaner/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/url-list-cleaner/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/url-list-cleaner/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/url-list-cleaner/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/url-list-cleaner/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/url-list-cleaner/)
+**Open:** [indexfixtools.com/url-list-cleaner/](https://indexfixtools.com/url-list-cleaner/) · other languages: [EN](https://indexfixtools.com/url-list-cleaner/) · [RU](https://indexfixtools.com/ru/url-list-cleaner/) · [UK](https://indexfixtools.com/uk/url-list-cleaner/) · [ES](https://indexfixtools.com/es/url-list-cleaner/) · [DE](https://indexfixtools.com/de/url-list-cleaner/) · [FR](https://indexfixtools.com/fr/url-list-cleaner/) · [VI](https://indexfixtools.com/vi/url-list-cleaner/)
 
 **How to use**
 
@@ -121,7 +121,7 @@ Remove duplicates and tracking parameters and normalise a messy list of links.
 
 Keep one best link per referring domain and flag links worth a second look.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/backlink-list-prioritizer/](https://indexfix-tools.lindabjorkvin.workers.dev/backlink-list-prioritizer/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/backlink-list-prioritizer/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/backlink-list-prioritizer/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/backlink-list-prioritizer/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/backlink-list-prioritizer/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/backlink-list-prioritizer/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/backlink-list-prioritizer/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/backlink-list-prioritizer/)
+**Open:** [indexfixtools.com/backlink-list-prioritizer/](https://indexfixtools.com/backlink-list-prioritizer/) · other languages: [EN](https://indexfixtools.com/backlink-list-prioritizer/) · [RU](https://indexfixtools.com/ru/backlink-list-prioritizer/) · [UK](https://indexfixtools.com/uk/backlink-list-prioritizer/) · [ES](https://indexfixtools.com/es/backlink-list-prioritizer/) · [DE](https://indexfixtools.com/de/backlink-list-prioritizer/) · [FR](https://indexfixtools.com/fr/backlink-list-prioritizer/) · [VI](https://indexfixtools.com/vi/backlink-list-prioritizer/)
 
 **How to use**
 
@@ -143,7 +143,7 @@ Keep one best link per referring domain and flag links worth a second look.
 
 Spread new links over days at a steady pace and export the schedule.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/drip-feed-planner/](https://indexfix-tools.lindabjorkvin.workers.dev/drip-feed-planner/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/drip-feed-planner/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/drip-feed-planner/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/drip-feed-planner/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/drip-feed-planner/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/drip-feed-planner/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/drip-feed-planner/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/drip-feed-planner/)
+**Open:** [indexfixtools.com/drip-feed-planner/](https://indexfixtools.com/drip-feed-planner/) · other languages: [EN](https://indexfixtools.com/drip-feed-planner/) · [RU](https://indexfixtools.com/ru/drip-feed-planner/) · [UK](https://indexfixtools.com/uk/drip-feed-planner/) · [ES](https://indexfixtools.com/es/drip-feed-planner/) · [DE](https://indexfixtools.com/de/drip-feed-planner/) · [FR](https://indexfixtools.com/fr/drip-feed-planner/) · [VI](https://indexfixtools.com/vi/drip-feed-planner/)
 
 **How to use**
 
@@ -165,7 +165,7 @@ Spread new links over days at a steady pace and export the schedule.
 
 Check which URLs a robots.txt file blocks for Googlebot and which line decides.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/robots-txt-tester/](https://indexfix-tools.lindabjorkvin.workers.dev/robots-txt-tester/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/robots-txt-tester/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/robots-txt-tester/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/robots-txt-tester/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/robots-txt-tester/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/robots-txt-tester/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/robots-txt-tester/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/robots-txt-tester/)
+**Open:** [indexfixtools.com/robots-txt-tester/](https://indexfixtools.com/robots-txt-tester/) · other languages: [EN](https://indexfixtools.com/robots-txt-tester/) · [RU](https://indexfixtools.com/ru/robots-txt-tester/) · [UK](https://indexfixtools.com/uk/robots-txt-tester/) · [ES](https://indexfixtools.com/es/robots-txt-tester/) · [DE](https://indexfixtools.com/de/robots-txt-tester/) · [FR](https://indexfixtools.com/fr/robots-txt-tester/) · [VI](https://indexfixtools.com/vi/robots-txt-tester/)
 
 **How to use**
 
@@ -187,7 +187,7 @@ Check which URLs a robots.txt file blocks for Googlebot and which line decides.
 
 Find real Googlebot visits in server logs and see what it crawls and which URLs fail.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/googlebot-log-analyzer/](https://indexfix-tools.lindabjorkvin.workers.dev/googlebot-log-analyzer/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/googlebot-log-analyzer/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/googlebot-log-analyzer/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/googlebot-log-analyzer/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/googlebot-log-analyzer/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/googlebot-log-analyzer/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/googlebot-log-analyzer/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/googlebot-log-analyzer/)
+**Open:** [indexfixtools.com/googlebot-log-analyzer/](https://indexfixtools.com/googlebot-log-analyzer/) · other languages: [EN](https://indexfixtools.com/googlebot-log-analyzer/) · [RU](https://indexfixtools.com/ru/googlebot-log-analyzer/) · [UK](https://indexfixtools.com/uk/googlebot-log-analyzer/) · [ES](https://indexfixtools.com/es/googlebot-log-analyzer/) · [DE](https://indexfixtools.com/de/googlebot-log-analyzer/) · [FR](https://indexfixtools.com/fr/googlebot-log-analyzer/) · [VI](https://indexfixtools.com/vi/googlebot-log-analyzer/)
 
 **How to use**
 
@@ -209,7 +209,7 @@ Find real Googlebot visits in server logs and see what it crawls and which URLs 
 
 Turn a list of URLs into valid XML sitemap files, split within Google's limits.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/sitemap-generator/](https://indexfix-tools.lindabjorkvin.workers.dev/sitemap-generator/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/sitemap-generator/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/sitemap-generator/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/sitemap-generator/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/sitemap-generator/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/sitemap-generator/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/sitemap-generator/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/sitemap-generator/)
+**Open:** [indexfixtools.com/sitemap-generator/](https://indexfixtools.com/sitemap-generator/) · other languages: [EN](https://indexfixtools.com/sitemap-generator/) · [RU](https://indexfixtools.com/ru/sitemap-generator/) · [UK](https://indexfixtools.com/uk/sitemap-generator/) · [ES](https://indexfixtools.com/es/sitemap-generator/) · [DE](https://indexfixtools.com/de/sitemap-generator/) · [FR](https://indexfixtools.com/fr/sitemap-generator/) · [VI](https://indexfixtools.com/vi/sitemap-generator/)
 
 **How to use**
 
@@ -231,7 +231,7 @@ Turn a list of URLs into valid XML sitemap files, split within Google's limits.
 
 Turn old→new URL pairs into Apache or Nginx redirect rules, with chains fixed.
 
-**Open:** [indexfix-tools.lindabjorkvin.workers.dev/redirect-map-generator/](https://indexfix-tools.lindabjorkvin.workers.dev/redirect-map-generator/) · other languages: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/redirect-map-generator/) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/ru/redirect-map-generator/) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/uk/redirect-map-generator/) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/es/redirect-map-generator/) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/de/redirect-map-generator/) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/fr/redirect-map-generator/) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/vi/redirect-map-generator/)
+**Open:** [indexfixtools.com/redirect-map-generator/](https://indexfixtools.com/redirect-map-generator/) · other languages: [EN](https://indexfixtools.com/redirect-map-generator/) · [RU](https://indexfixtools.com/ru/redirect-map-generator/) · [UK](https://indexfixtools.com/uk/redirect-map-generator/) · [ES](https://indexfixtools.com/es/redirect-map-generator/) · [DE](https://indexfixtools.com/de/redirect-map-generator/) · [FR](https://indexfixtools.com/fr/redirect-map-generator/) · [VI](https://indexfixtools.com/vi/redirect-map-generator/)
 
 **How to use**
 
@@ -251,7 +251,7 @@ Turn old→new URL pairs into Apache or Nginx redirect rules, with chains fixed.
 
 **Indexing problems: diagnostic checklist** — Step by step: status in Search Console, page availability, robots.txt, noindex, canonical URL, redirects, sitemap and backlinks, with what to do in each case.
 
-Download: [EN](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-en.pdf) · [RU](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-ru.pdf) · [UK](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-uk.pdf) · [ES](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-es.pdf) · [DE](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-de.pdf) · [FR](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-fr.pdf) · [VI](https://indexfix-tools.lindabjorkvin.workers.dev/downloads/indexing-diagnostics-checklist-vi.pdf)
+Download: [EN](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-en.pdf) · [RU](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-ru.pdf) · [UK](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-uk.pdf) · [ES](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-es.pdf) · [DE](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-de.pdf) · [FR](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-fr.pdf) · [VI](https://indexfixtools.com/downloads/indexing-diagnostics-checklist-vi.pdf)
 
 Details: [downloads/README.md](downloads/README.md).
 
