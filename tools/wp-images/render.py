@@ -6,8 +6,12 @@
 Writes to out_dir:
   <slug>-cover.jpg        1200x675, no text (brand palette, motif picked from the topic)
   <slug>-infographic.png  1200x900, the captions from "Подписи на картинке" as numbered cards
-  media.json              alt / title / caption / description / place for both images,
+  <slug>-infographic-2.png, -3.png ...  one more per extra "### Инфографика N" / "### Схема N" block
+  media.json              alt / title / caption / description / place for every image
+                          ("images" list + legacy "cover"/"infographic" keys),
                           ready for wp_upload_media_from_url + wp_update_media
+
+Every image block must have Alt, Caption and "Описание (медиатека WP)" (render refuses otherwise).
 
 Needs Playwright with Chromium (PLAYWRIGHT_BROWSERS_PATH or executablePath /opt/pw-browsers/chromium)
 and Pillow. Fonts (Manrope, OFL, Latin + Cyrillic) are in ./fonts.
@@ -42,34 +46,46 @@ def parse(md):
     block = md.split("## ИЗОБРАЖЕНИЯ", 1)[1] if "## ИЗОБРАЖЕНИЯ" in md else ""
     if not block:
         sys.exit("no '## ИЗОБРАЖЕНИЯ' block in the article")
-    cov, inf = section(block, "Обложка"), section(block, "Инфографика")
-    labels = []
-    m = re.search(r"\*\*Подписи на картинке:\*\*(.*?)(?=\n\s*\*\*|\Z)", inf, re.S)
-    if m:
-        for line in m.group(1).splitlines():
-            line = line.strip()
-            if line.startswith(("- ", "• ", "* ")):
-                labels.append(line[2:].strip())
-            elif line and not labels and not line.startswith("**"):
-                labels += [x.strip() for x in re.split(r";|\|", line) if x.strip()]
-    labels = labels[:8]
-    if len(labels) < 3:
-        sys.exit("infographic needs at least 3 captions in 'Подписи на картинке'")
+    cov = section(block, "Обложка")
+    extra = re.findall(r"^###\s*((?:Инфографика|Схема)[^\n]*)\n(.*?)(?=^###\s|\Z)", block, re.S | re.M)
+    if not extra:
+        sys.exit("no '### Инфографика' block in the article")
 
-    def meta(sec, kind):
+    def labels_of(sec, title):
+        labels = []
+        m = re.search(r"\*\*Подписи на картинке:\*\*(.*?)(?=\n\s*\*\*|\Z)", sec, re.S)
+        if m:
+            for line in m.group(1).splitlines():
+                line = line.strip()
+                if line.startswith(("- ", "• ", "* ")):
+                    labels.append(line[2:].strip())
+                elif line and not labels and not line.startswith("**"):
+                    labels += [x.strip() for x in re.split(r";|\|", line) if x.strip()]
+        labels = labels[:8]
+        if len(labels) < 3:
+            sys.exit(f"'{title}' needs at least 3 captions in 'Подписи на картинке'")
+        return labels
+
+    def meta(sec, fname, title):
         alt = field(sec, "Alt:")
         cap = field(sec, "Caption:")
-        return {
-            "file": f"{slug}-{kind}" + (".jpg" if kind == "cover" else ".png"),
-            "alt": alt,
-            "caption": cap,
-            "title": field(sec, "Заголовок (медиатека WP):") or alt,
-            "description": field(sec, "Описание (медиатека WP):") or cap,
-        }
-    out = {"slug": slug, "lang": lang, "topic": topic, "h1": h1,
-           "cover": meta(cov, "cover"), "infographic": meta(inf, "infographic")}
-    out["infographic"]["place_after"] = field(inf, "Место в статье:")
-    out["infographic"]["labels"] = labels
+        desc = field(sec, "Описание (медиатека WP):")
+        miss = [n for n, v in (("Alt", alt), ("Caption", cap), ("Описание (медиатека WP)", desc)) if not v]
+        if miss:
+            sys.exit(f"'{title}': missing " + ", ".join(miss))
+        return {"file": fname, "alt": alt, "caption": cap,
+                "title": field(sec, "Заголовок (медиатека WP):") or alt, "description": desc}
+
+    images = [dict(meta(cov, f"{slug}-cover.jpg", "Обложка"), kind="cover")]
+    for n, (title, sec) in enumerate(extra, 1):
+        fname = f"{slug}-infographic.png" if n == 1 else f"{slug}-infographic-{n}.png"
+        img = dict(meta(sec, fname, title), kind="infographic")
+        img["place_after"] = field(sec, "Место в статье:")
+        img["labels"] = labels_of(sec, title)
+        img["heading"] = field(sec, "Заголовок на картинке:") or ""
+        images.append(img)
+    out = {"slug": slug, "lang": lang, "topic": topic, "h1": h1, "images": images,
+           "cover": images[0], "infographic": images[1]}
     return out
 
 # ---------- drawing ----------
@@ -150,13 +166,13 @@ html,body{{margin:0;width:1200px;height:675px;overflow:hidden;background:{PAL['b
 <rect x="{80 if side else 640}" y="330" width="120" height="18" rx="9" fill="#FFD23F" opacity=".8"/>
 <g transform="translate({mx},100)">{motif_svg(kind, rnd)}</g></svg></body></html>"""
 
-def infographic_html(spec):
-    labels = spec["infographic"]["labels"]
+def infographic_html(spec, img):
+    labels = img["labels"]
     n = len(labels)
     cols = 1 if n <= 3 else 2
     longest = max(len(x) for x in labels)
     fs = 34 if n <= 4 and longest < 60 else 30 if n <= 6 and longest < 80 else 26 if longest < 110 else 22
-    title = spec["h1"] or spec["topic"]
+    title = img.get("heading") or spec["h1"] or spec["topic"]
     tfs = 46 if len(title) < 55 else 40 if len(title) < 80 else 34
     cards = "".join(f'<div class="c"><b>{i+1:02d}</b><span>{html.escape(t)}</span></div>' for i, t in enumerate(labels))
     return f"""<!doctype html><html><head><meta charset=utf-8><style>{CSS_FONTS}
@@ -211,13 +227,20 @@ def main():
     outdir = sys.argv[2]
     os.makedirs(outdir, exist_ok=True)
     spec = parse(md)
-    c = os.path.join(outdir, spec["cover"]["file"])
-    i = os.path.join(outdir, spec["infographic"]["file"])
-    asyncio.run(shoot([(cover_html(spec), 1200, 675, c), (infographic_html(spec), 1200, 900, i)]))
+    c = os.path.join(outdir, spec["images"][0]["file"])
+    jobs = [(cover_html(spec), 1200, 675, c)]
+    infs = []
+    for img in spec["images"][1:]:
+        p = os.path.join(outdir, img["file"])
+        jobs.append((infographic_html(spec, img), 1200, 900, p))
+        infs.append(p)
+    asyncio.run(shoot(jobs))
     finish(c + ".raw.png", c, True)
-    finish(i + ".raw.png", i, False)
+    for p in infs:
+        finish(p + ".raw.png", p, False)
     json.dump(spec, open(os.path.join(outdir, "media.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(json.dumps({"cover": c, "infographic": i, "bytes": [os.path.getsize(c), os.path.getsize(i)]}, ensure_ascii=False))
+    files = [c] + infs
+    print(json.dumps({"files": files, "bytes": [os.path.getsize(f) for f in files]}, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()
