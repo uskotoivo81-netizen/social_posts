@@ -29,9 +29,9 @@ footer{margin-top:48px;font-size:14px;color:#6b7a8c;border-top:1px solid #e3e9ef
 <td>Tạm thời</td>
 </tr>
 <tr>
-<td>Truyền giá trị liên kết</td>
-<td>Có, gần như toàn bộ</td>
-<td>Không đáng kể</td>
+<td>URL chính trong chỉ mục</td>
+<td>URL mới</td>
+<td>Thường vẫn là URL cũ</td>
 </tr>
 <tr>
 <td>Thời điểm dùng</td>
@@ -45,7 +45,7 @@ footer{margin-top:48px;font-size:14px;color:#6b7a8c;border-top:1px solid #e3e9ef
 </tr>
 </tbody>
 </table>
-<p>Chọn sai mã có thể gây thiệt hại: dùng 302 khi cần 301 khiến Google tiếp tục xem URL cũ là phiên bản chính, làm pha loãng tín hiệu xếp hạng mà đáng lẽ phải chuyển sang trang mới.</p>
+<p>Chọn sai mã có thể gây thiệt hại: dùng 302 khi cần 301 khiến Google có thể tiếp tục xem URL cũ là phiên bản chính và hiển thị nó trong kết quả tìm kiếm thay cho trang mới.</p>
 <h2>Khi nào nên dùng redirect 301</h2>
 <p>Bạn nên dùng 301 trong các tình huống sau:</p>
 <ul>
@@ -58,10 +58,10 @@ footer{margin-top:48px;font-size:14px;color:#6b7a8c;border-top:1px solid #e3e9ef
 <h2>Lỗi chuỗi và vòng lặp chuyển hướng</h2>
 <p>Hai lỗi phổ biến làm lãng phí ngân sách thu thập dữ liệu:</p>
 <ul>
-<li><strong>Chuỗi chuyển hướng</strong>: A → B → C. Mỗi bước thêm độ trễ, làm giảm trải nghiệm người dùng và core web vitals, đồng thời làm pha loãng uy tín liên kết.</li>
+<li><strong>Chuỗi chuyển hướng</strong>: A → B → C. Mỗi bước thêm độ trễ, làm giảm trải nghiệm người dùng và Core Web Vitals, đồng thời làm pha loãng uy tín liên kết.</li>
 <li><strong>Vòng lặp chuyển hướng</strong>: A → B → A. Lỗi nghiêm trọng, bẫy bot và ngăn lập chỉ mục cả hai trang.</li>
 </ul>
-<p>Với các chuỗi dài hoặc vòng lặp, cách xử lý là cập nhật liên kết nội bộ để trỏ trực tiếp từ A đến trang đích cuối cùng. Việc này giúp Googlebot di chuyển website của bạn một cách hiệu quả hơn.</p>
+<p>Với các chuỗi dài hoặc vòng lặp, cách xử lý là cập nhật liên kết nội bộ để trỏ trực tiếp từ A đến trang đích cuối cùng. Việc này giúp Googlebot thu thập dữ liệu website hiệu quả hơn.</p>
 <h2>Cách kiểm tra redirect 301</h2>
 <p>Để phát hiện chuỗi, vòng lặp hoặc mã chuyển hướng sai, bạn có thể:</p>
 <ol>
@@ -72,7 +72,7 @@ footer{margin-top:48px;font-size:14px;color:#6b7a8c;border-top:1px solid #e3e9ef
 <p>Đối với những dự án lớn hoặc sau khi di chuyển toàn bộ website, hãy đối chiếu từng URL cũ với URL mới để chắc chắn trang đích cuối cùng trả về 200 OK chứ không phải một chuyển hướng trung gian hoặc lỗi. Trước khi xử lý từng chuyển hướng, bạn có thể đối chiếu với <a href="https://vn.speedyindex.com/checklist-seo-sau-chuyen-doi/">danh sách kiểm tra đầy đủ</a> để không bỏ sót bước xác minh lập chỉ mục và tín hiệu xếp hạng.</p>
 <h2>Câu hỏi thường gặp</h2>
 <h3>Redirect 301 có mất PageRank không?</h3>
-<p>Có mất một phần nhỏ, nhưng 301 vẫn là cách chuyển hướng bảo toàn giá trị liên kết tốt nhất hiện nay. Chuỗi chuyển hướng càng dài, rủi ro pha loãng tín hiệu càng lớn.</p>
+<p>Theo Google, chuyển hướng 301 không làm mất PageRank. Tuy vậy, chuỗi chuyển hướng càng dài, rủi ro pha loãng tín hiệu càng lớn.</p>
 <h3>Khi nào Google gỡ URL cũ khỏi chỉ mục sau 301?</h3>
 <p>Google cần thời gian thu thập dữ liệu và xử lý tín hiệu chuyển hướng. URL cũ sẽ dần bị gỡ khỏi chỉ mục Google khi Googlebot xác nhận 301 ổn định và trang đích mới đã được lập chỉ mục.</p>
 <h3>Có nên dùng 301 cho tất cả các trang khi di chuyển website?</h3>
