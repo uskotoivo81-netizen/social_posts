@@ -1,0 +1,14 @@
+# SpeedyIndex Rank Tracker — facts checked on the live tracker pages (all 7 languages) on 20.11.2026. ONLY these facts may be used.
+- Checks where a site ranks in Google for each keyword: Google DESKTOP results only, for a country or a city you choose. Mobile results and other search engines are not supported.
+- Depth: Top-10, Top-30, Top-50 or Top-100. Pages deeper than the Top-10 are loaded only while your site or a competitor is still not found; you pay only for pages actually loaded.
+- Up to 10 competitor domains per project; the report also shows every site that reaches the Top-10 for your keywords and your place among them.
+- AI Overviews: for keywords where Google shows an AI Overview, the report shows whether it cites your site, what it says about you, and how that changes from check to check.
+- Report after a check: Summary (visibility, average position, Top-3 and Top-10 counts, AI Overview citations, change since the last check); Positions (every keyword with its place, SERP features, ranking URL, trend); SERP competitors; AI Overviews.
+- Visibility = your share of possible clicks across all keywords in the project (accounts for positions and how many keywords were found).
+- History: compare a check with the previous one (keywords that entered or dropped out of the Top-10, visibility and average position movement).
+- Tags, target URLs, manual checks or a schedule, export of results.
+- New project in 3 steps: 1) domain + keywords (one per line, optional tags and target URL), country or city, depth; 2) up to 10 competitors, schedule or manual; 3) read the report.
+- Pricing: no subscription; pay with tokens only for the checks you run. Regular price 4 tokens per keyword (Top-10 depth). Launch price 2 tokens per keyword from November 2 to December 2, 2026. 100 free tokens on sign-up, no card required. Tokens never expire. One token balance for rank tracking, link indexing, index checks (Google, Bing, Yandex) and backlink checks.
+- Also available in a chat: Rank Tracker tools in the SpeedyIndex MCP connector for Claude (read positions, trend up to 90 checks, AI Overview data; creating a project and adding keywords is free; running a check spends tokens; the cost is shown in advance by rank_tracker_get_check_cost).
+- Who it is for: SEO freelancers (client projects without a plan between projects), agencies (visibility and place among competitors for monthly reports), site owners (a few dozen keywords weekly), link builders (see whether new links move positions and check those links are indexed from the same balance).
+- FORBIDDEN: comparing prices with named competitors, "better than Ahrefs/Semrush", promises of ranking growth, timelines or percentages, "free indexing", first person, invented cases/quotes/statistics.
