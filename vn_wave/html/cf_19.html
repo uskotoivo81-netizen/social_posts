@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MCP là gì? Giải thích MCP server cho SEO | SpeedyIndex</title><meta name="description" content="MCP là gì? Model Context Protocol giúp trợ lý AI gọi công cụ bên ngoài. Tìm hiểu cách MCP server hoạt động trong SEO: lập chỉ mục, kiểm tra backlink.">
+<link rel="canonical" href="https://mcp-la-gi.lindabjorkvin.workers.dev/"><meta property="og:type" content="article"><meta property="og:title" content="MCP là gì? Giải thích MCP server cho SEO | SpeedyIndex">
+<meta property="og:description" content="MCP là gì? Model Context Protocol giúp trợ lý AI gọi công cụ bên ngoài. Tìm hiểu cách MCP server hoạt động trong SEO: lập chỉ mục, kiểm tra backlink."><meta property="og:image" content="https://raw.githubusercontent.com/uskotoivo81-netizen/social_posts/main/vn_wave/19-mcp-la-gi.png"><meta property="og:url" content="https://mcp-la-gi.lindabjorkvin.workers.dev/">
+<meta name="twitter:card" content="summary_large_image"><style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px 64px;color:#1b2533;line-height:1.7;font-size:18px}
+h1{font-size:34px;line-height:1.25;margin:24px 0 16px}h2{font-size:26px;margin-top:40px}h3{font-size:20px;margin-top:28px}
+img{max-width:100%;height:auto;border-radius:12px}a{color:#007a5e}table{border-collapse:collapse;width:100%;font-size:16px;margin:16px 0}
+th,td{border:1px solid #d6dee8;padding:8px 10px;text-align:left;vertical-align:top}th{background:#f2f6fa}
+pre{background:#0d1a2c;color:#e6eef7;padding:16px;border-radius:10px;overflow:auto;font-size:14px}code{font-size:.92em}
+footer{margin-top:48px;font-size:14px;color:#6b7a8c;border-top:1px solid #e3e9ef;padding-top:16px}</style></head>
+<body><article><h1>MCP là gì? Cách MCP server hoạt động trong SEO</h1>
+<p><img src="https://raw.githubusercontent.com/uskotoivo81-netizen/social_posts/main/vn_wave/19-mcp-la-gi.png" alt="MCP là gì và cách dùng trong SEO" width="1200" height="630"></p>
+<p>MCP là gì? MCP (Model Context Protocol) là một chuẩn mở do Anthropic giới thiệu, cho phép trợ lý AI như Claude gọi trực tiếp các công cụ của dịch vụ bên ngoài. Hiểu đơn giản, MCP giống như một “cầu nối” để AI không chỉ trả lời bằng kiến thức có sẵn mà còn thao tác dữ liệu thật từ các hệ thống khác. Trong SEO, điều này mở ra cách làm việc mới: bạn yêu cầu Claude kiểm tra index, gửi URL lập chỉ mục hay đối chiếu backlink (liên kết ngược) mà không cần rời khỏi hội thoại.</p>
+<h2>MCP hoạt động như thế nào?</h2>
+<p>Kiến trúc MCP xoay quanh ba thành phần chính:</p>
+<ul>
+<li><strong>MCP client</strong> — ứng dụng trợ lý AI, ví dụ Claude Desktop, Claude Code, Cursor hay VS Code.</li>
+<li><strong>MCP server</strong> — dịch vụ cung cấp các hành động dưới dạng công cụ (tool). Mỗi tool tương ứng một chức năng cụ thể như tạo tác vụ lập chỉ mục, kiểm tra trạng thái URL hay lấy báo cáo backlink.</li>
+<li><strong>Tool</strong> — đơn vị hành động mà client có thể gọi. Thay vì AI đoán câu trả lời, tool trả về dữ liệu thật từ dịch vụ.</li>
+</ul>
+<p>Khi bạn nhập một yêu cầu bằng ngôn ngữ tự nhiên, client quyết định gọi tool nào trên MCP server. Bạn nhìn thấy từng lệnh gọi và kết quả trả về ngay trong giao diện trò chuyện. Máy chủ có thể chạy từ xa qua HTTP với đăng nhập OAuth, hoặc chạy cục bộ qua npm với khóa API lưu trong biến môi trường.</p>
+<h2>Ví dụ MCP trong SEO</h2>
+<p>Giả sử bạn có năm URL bài blog mới và muốn biết trang nào chưa xuất hiện trong chỉ mục Google. Thay vì mở Google Search Console, xuất dữ liệu rồi dán vào Claude, bạn chỉ cần nói: “Kiểm tra năm URL này trên Google, trang nào chưa được lập chỉ mục thì gửi đi.” Một <a href="https://vn.speedyindex.com/mcp/">MCP server cho SEO</a> sẽ nhận yêu cầu, gọi tool kiểm tra index, trả về danh sách đã index và chưa index, rồi hỏi bạn có muốn tạo tác vụ lập chỉ mục cho các URL còn thiếu không.</p>
+<p>Cách làm này cũng hữu ích cho việc theo dõi thứ hạng. Bạn có thể yêu cầu Claude lấy vị trí từ khóa mới nhất, so sánh với lần kiểm tra trước và liệt kê trang nào tụt hạng — tất cả do tool của MCP server thực hiện thay vì dữ liệu ghi nhớ của mô hình.</p>
+<h2>Lưu ý bảo mật khi dùng MCP</h2>
+<p>Vì MCP server kết nối tài khoản của bạn với trợ lý AI, bảo mật là yếu tố cần chú ý. Với máy chủ từ xa, khóa API SpeedyIndex không được nhập vào hội thoại mà điền trong trang đăng nhập riêng. Khóa được lưu trong token mã hóa, token truy cập có hiệu lực ngắn hạn, và việc đổi khóa trong tài khoản sẽ thu hồi mọi phiên đăng nhập.</p>
+<p>Một điểm đáng lưu ý khác: MCP server thiết kế theo hướng chỉ đọc cho phần lớn tool. Các tool thay đổi dữ liệu hoặc tiêu tốn token thường yêu cầu xác nhận từ bạn trước khi chạy. Ví dụ, tool tạo tác vụ lập chỉ mục sẽ không tự động trừ token nếu bạn chưa cho phép — phù hợp khi bạn muốn kiểm soát ngân sách SEO chặt chẽ.</p>
+<p>Nếu bạn chưa quen với dịch vụ lập chỉ mục, <a href="https://vn.speedyindex.com/">SpeedyIndex</a> hoạt động theo mô hình chỉ trả token cho URL đã được Google xác nhận lập chỉ mục. Kết hợp với MCP, bạn có thể quản lý toàn bộ quy trình — từ phát hiện trang chưa index đến đối chiếu báo cáo — bằng ngôn ngữ tự nhiên trong Claude hoặc Cursor.</p>
+<h2>Câu hỏi thường gặp (FAQ)</h2>
+<h3>MCP khác gì với API thông thường?</h3>
+<p>API thông thường yêu cầu bạn viết code hoặc dùng công cụ gọi HTTP riêng. MCP đưa API vào môi trường trợ lý AI dưới dạng tool, cho phép bạn thao tác bằng ngôn ngữ tự nhiên. Trợ lý tự quyết định gọi tool nào phù hợp với yêu cầu.</p>
+<h3>Bạn có cần biết lập trình để dùng MCP server không?</h3>
+<p>Không nhất thiết. Với MCP server từ xa, bạn chỉ cần dán URL trình kết nối vào Claude hoặc Cursor và đăng nhập một lần bằng khóa API. Phiên bản cục bộ qua npm cần Node.js 18 trở lên và thiết lập biến môi trường.</p>
+<h3>MCP server có an toàn cho tài khoản SEO của bạn không?</h3>
+<p>Tùy thuộc vào cách triển khai. MCP server từ xa của SpeedyIndex lưu khóa trong token mã hóa, không lưu database phía máy chủ, và token truy cập ngắn hạn. Các tool tốn token yêu cầu xác nhận trước khi thực hiện, giúp bạn kiểm soát chi phí.</p>
+</article><footer>Cập nhật: 20 tháng 11 năm 2026</footer></body></html>

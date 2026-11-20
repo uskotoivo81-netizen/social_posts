@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Redirect 301 là gì: chuyển hướng vĩnh viễn và SEO</title><meta name="description" content="Redirect 301 là gì? Tìm hiểu mã chuyển hướng vĩnh viễn, khi nào dùng, so sánh 301 vs 302, cách phát hiện chuỗi và vòng lặp redirect hiệu quả.">
+<link rel="canonical" href="https://redirect-301-la-gi.lindabjorkvin.workers.dev/"><meta property="og:type" content="article"><meta property="og:title" content="Redirect 301 là gì: chuyển hướng vĩnh viễn và SEO">
+<meta property="og:description" content="Redirect 301 là gì? Tìm hiểu mã chuyển hướng vĩnh viễn, khi nào dùng, so sánh 301 vs 302, cách phát hiện chuỗi và vòng lặp redirect hiệu quả."><meta property="og:image" content="https://raw.githubusercontent.com/uskotoivo81-netizen/social_posts/main/vn_wave/08-redirect-301-la-gi.png"><meta property="og:url" content="https://redirect-301-la-gi.lindabjorkvin.workers.dev/">
+<meta name="twitter:card" content="summary_large_image"><style>body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:0 auto;padding:32px 20px 64px;color:#1b2533;line-height:1.7;font-size:18px}
+h1{font-size:34px;line-height:1.25;margin:24px 0 16px}h2{font-size:26px;margin-top:40px}h3{font-size:20px;margin-top:28px}
+img{max-width:100%;height:auto;border-radius:12px}a{color:#007a5e}table{border-collapse:collapse;width:100%;font-size:16px;margin:16px 0}
+th,td{border:1px solid #d6dee8;padding:8px 10px;text-align:left;vertical-align:top}th{background:#f2f6fa}
+pre{background:#0d1a2c;color:#e6eef7;padding:16px;border-radius:10px;overflow:auto;font-size:14px}code{font-size:.92em}
+footer{margin-top:48px;font-size:14px;color:#6b7a8c;border-top:1px solid #e3e9ef;padding-top:16px}</style></head>
+<body><article><h1>Redirect 301 là gì: chuyển hướng vĩnh viễn và SEO</h1>
+<p><img src="https://raw.githubusercontent.com/uskotoivo81-netizen/social_posts/main/vn_wave/08-redirect-301-la-gi.png" alt="Redirect 301 nghĩa là gì?" width="1200" height="630"></p>
+<p>Redirect 301 là gì? Đó là mã trạng thái HTTP báo cho trình duyệt và công cụ tìm kiếm biết một URL đã chuyển hướng vĩnh viễn đến một địa chỉ mới. Khi bạn truy cập URL cũ, máy chủ trả về mã 301 và tự động đưa bạn đến trang đích mới mà không cần thao tác thủ công.</p>
+<h2>301 vs 302: khác biệt cốt lõi</h2>
+<p>Cả hai đều là chuyển hướng (redirect), nhưng bản chất rất khác nhau:</p>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>301</th>
+<th>302</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tính chất</td>
+<td>Vĩnh viễn</td>
+<td>Tạm thời</td>
+</tr>
+<tr>
+<td>Truyền giá trị liên kết</td>
+<td>Có, gần như toàn bộ</td>
+<td>Không đáng kể</td>
+</tr>
+<tr>
+<td>Thời điểm dùng</td>
+<td>Di chuyển website, đổi URL</td>
+<td>Bảo trì, khuyến mãi ngắn hạn</td>
+</tr>
+<tr>
+<td>Tín hiệu cho Google</td>
+<td>Thay URL cũ bằng URL mới</td>
+<td>Giữ URL cũ trong chỉ mục</td>
+</tr>
+</tbody>
+</table>
+<p>Chọn sai mã có thể gây thiệt hại: dùng 302 khi cần 301 khiến Google tiếp tục xem URL cũ là phiên bản chính, làm pha loãng tín hiệu xếp hạng mà đáng lẽ phải chuyển sang trang mới.</p>
+<h2>Khi nào nên dùng redirect 301</h2>
+<p>Bạn nên dùng 301 trong các tình huống sau:</p>
+<ul>
+<li><strong>Di chuyển website</strong> sang tên miền mới hoặc từ HTTP lên HTTPS.</li>
+<li><strong>Đổi cấu trúc URL</strong> của bài viết, danh mục sản phẩm.</li>
+<li><strong>Gộp nội dung trùng lặp</strong> về một URL chuẩn (canonical).</li>
+<li><strong>Xóa trang cũ</strong> nhưng muốn bảo toàn backlink và thứ hạng đã xây dựng.</li>
+</ul>
+<p>Mục tiêu là giúp Googlebot thu thập dữ liệu trang mới một cách sạch sẽ và cập nhật chỉ mục Google đúng địa chỉ.</p>
+<h2>Lỗi chuỗi và vòng lặp chuyển hướng</h2>
+<p>Hai lỗi phổ biến làm lãng phí ngân sách thu thập dữ liệu:</p>
+<ul>
+<li><strong>Chuỗi chuyển hướng</strong>: A → B → C. Mỗi bước thêm độ trễ, làm giảm trải nghiệm người dùng và core web vitals, đồng thời làm pha loãng uy tín liên kết.</li>
+<li><strong>Vòng lặp chuyển hướng</strong>: A → B → A. Lỗi nghiêm trọng, bẫy bot và ngăn lập chỉ mục cả hai trang.</li>
+</ul>
+<p>Với các chuỗi dài hoặc vòng lặp, cách xử lý là cập nhật liên kết nội bộ để trỏ trực tiếp từ A đến trang đích cuối cùng. Việc này giúp Googlebot di chuyển website của bạn một cách hiệu quả hơn.</p>
+<h2>Cách kiểm tra redirect 301</h2>
+<p>Để phát hiện chuỗi, vòng lặp hoặc mã chuyển hướng sai, bạn có thể:</p>
+<ol>
+<li>Dùng công cụ <strong>kiểm tra chuyển hướng 301</strong> — gửi URL, xem header HTTP trả về.</li>
+<li>Kiểm tra báo cáo <strong>“Trang có chuyển hướng”</strong> trong Google Search Console.</li>
+<li>Chạy lại danh sách URL sau di chuyển qua <a href="https://vn.speedyindex.com/kiem-tra-chuyen-huong/">kiểm tra chuỗi chuyển hướng 301</a> để xem toàn bộ đường đi.</li>
+</ol>
+<p>Đối với những dự án lớn hoặc sau khi di chuyển toàn bộ website, hãy đối chiếu từng URL cũ với URL mới để chắc chắn trang đích cuối cùng trả về 200 OK chứ không phải một chuyển hướng trung gian hoặc lỗi. Trước khi xử lý từng chuyển hướng, bạn có thể đối chiếu với <a href="https://vn.speedyindex.com/checklist-seo-sau-chuyen-doi/">danh sách kiểm tra đầy đủ</a> để không bỏ sót bước xác minh lập chỉ mục và tín hiệu xếp hạng.</p>
+<h2>Câu hỏi thường gặp</h2>
+<h3>Redirect 301 có mất PageRank không?</h3>
+<p>Có mất một phần nhỏ, nhưng 301 vẫn là cách chuyển hướng bảo toàn giá trị liên kết tốt nhất hiện nay. Chuỗi chuyển hướng càng dài, rủi ro pha loãng tín hiệu càng lớn.</p>
+<h3>Khi nào Google gỡ URL cũ khỏi chỉ mục sau 301?</h3>
+<p>Google cần thời gian thu thập dữ liệu và xử lý tín hiệu chuyển hướng. URL cũ sẽ dần bị gỡ khỏi chỉ mục Google khi Googlebot xác nhận 301 ổn định và trang đích mới đã được lập chỉ mục.</p>
+<h3>Có nên dùng 301 cho tất cả các trang khi di chuyển website?</h3>
+<p>Bạn nên áp dụng 301 cho mọi URL cũ có đối tác mới tương ứng. Với các trang không còn tồn tại, bạn có thể trả về 404 hoặc 410 thay vì chuyển hướng hàng loạt về trang chủ.</p>
+</article><footer>Cập nhật: 20 tháng 11 năm 2026</footer></body></html>
